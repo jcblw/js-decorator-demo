@@ -1,0 +1,20 @@
+{
+  "name": "decorator-examples",
+  "version": "1.0.0",
+  "description": "A simple demo on how to make a ES7 decorator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node startup.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "es7",
+    "decorators",
+    "demo"
+  ],
+  "author": "Jacob Lowe",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^5.8.23"
+  }
+}
