@@ -1,3 +1,6 @@
+
+// logArgs - will log all args passed to a method
+
 function logArgs (target, key, descriptor) {
   const {value: fn} = descriptor
   descriptor.value = function(...args) {
@@ -6,6 +9,8 @@ function logArgs (target, key, descriptor) {
   }
   return descriptor
 }
+
+// logArgs - will log return of a method
 
 function logReturn (target, key, descriptor) {
   const {value: fn} = descriptor
@@ -17,6 +22,8 @@ function logReturn (target, key, descriptor) {
   }
   return descriptor
 }
+
+// returnType - will test the type of a return
 
 function returnType (type) {
   return (target, key, descriptor) => {
@@ -34,6 +41,8 @@ function returnType (type) {
     return descriptor
   }
 }
+
+// argTypes - will test the type of args pass to method
 
 function argTypes (...types) {
   return (target, key, descriptor) => {
@@ -55,17 +64,19 @@ function argTypes (...types) {
 
 export {logArgs, logReturn, returnType, argTypes}
 
+// this is just for fancier logs
+
 function ordinalSuffix(i) {
-    const j = i % 10
-    const k = i % 100
-    if (j === 1 && k !== 11) {
-        return i + 'st'
-    }
-    if (j === 2 && k !== 12) {
-        return i + 'nd'
-    }
-    if (j === 3 && k !== 13) {
-        return i + 'rd'
-    }
-    return i + 'th'
+  const j = i % 10
+  const k = i % 100
+  if (j === 1 && k !== 11) {
+    return i + 'st'
+  }
+  if (j === 2 && k !== 12) {
+    return i + 'nd'
+  }
+  if (j === 3 && k !== 13) {
+    return i + 'rd'
+  }
+  return i + 'th'
 }
