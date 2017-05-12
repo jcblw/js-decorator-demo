@@ -1,5 +1,7 @@
 # Decorator Demo
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jcblw/js-decorator-demo.svg)](https://greenkeeper.io/)
+
 This is a repo that I used to play around with how [JS decorators](https://github.com/wycats/javascript-decorators) work. They are pretty awesome and I hope they make it to the language.
 
 ## To Run
